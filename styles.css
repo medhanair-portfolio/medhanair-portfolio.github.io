@@ -1,0 +1,487 @@
+* {
+
+    font-family: "itc-american-typewriter", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+}
+
+
+
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+
+
+
+header a {
+
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin: 20px;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+
+header a:hover {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+}
+
+
+.tagline {
+
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+
+
+.card div {
+
+
+    margin: 20px;
+    background: #a8a4b1;
+
+    color: black;
+
+    padding: 30px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 50px;
+}
+
+.wallpaper {
+
+    background-color: rgba(154, 188, 164, 255);
+
+}
+
+.wallpaper2 {
+
+    background-image: url(whitewallpaper.webp);
+    margin: 20px;
+
+}
+
+.heading {
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+}
+
+.card div p {
+
+    margin: 20px;
+
+}
+
+.blankspace {
+
+    color: #a8a4b1;
+
+}
+
+
+footer button a {
+
+
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    background-color: rgba(242, 238, 233, 255);
+
+
+}
+
+footer button a:hover {
+
+
+    background-color: none;
+}
+
+
+footer button:hover {
+
+    background-color: #abadbd;
+}
+
+footer button {
+
+    margin: 50px;
+    padding: 10px;
+}
+
+footer {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+
+
+
+.wallpaper {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+.entrypage,
+.page1,
+.page2 {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.buttonentry {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.buttonentry button {
+
+    width: 200px;
+    height: 100px;
+    font-size: 40px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #f4dac3;
+
+}
+
+.buttonentry button:hover {
+
+    opacity: 75%;
+
+}
+
+.entrypagecolor {
+
+    margin: 20px;
+
+}
+
+
+
+.entrypage h1 {
+
+    text-align: center;
+    margin: 60px;
+
+}
+
+
+
+
+
+.youtube {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttonpage1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.page1 h1 {
+
+    text-align: center;
+    margin: 60px;
+
+}
+
+.buttonpage1 button {
+
+    width: 100px;
+    height: 75px;
+    font-size: 20px;
+    padding: 3px;
+    margin: 20px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #f4dac3;
+
+
+}
+
+
+.buttonpage1 button:hover {
+
+    opacity: 75%;
+
+}
+
+.page2 {
+
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+
+
+}
+
+.page2 div {
+    margin: 20px;
+    color: black;
+    padding: 30px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.page2 div:hover {
+
+    opacity: 70%;
+}
+
+
+.page2 h1 {
+
+
+    margin: 50px;
+
+}
+
+.return {
+
+    display: flex;
+    justify-content: last baseline;
+    align-items: end;
+
+}
+
+.return button {
+
+    width: 100px;
+    height: 75px;
+    font-size: 20px;
+    padding: 3px;
+    margin: 20px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #f4dac3;
+
+}
+
+.return button:hover {
+
+    opacity: 75%;
+
+}
+
+
+
+
+
+@media (max-width: 780px) {
+
+
+    .tagline h3 {
+
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    header a {
+
+        font-size: 35px;
+
+    }
+
+    .card div {
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+
+    }
+
+    iframe {
+
+
+        width: 400px;
+        height: 300px;
+
+    }
+
+    .page2 img {
+
+        width: 100px;
+        height: 100px;
+
+
+
+    }
+
+
+
+
+
+}
+
+
+@media (max-width: 465px) {
+
+
+    header a {
+
+        font-size: 20px;
+
+    }
+
+    .logo img {
+
+        width: 300px;
+        height: 350px;
+        margin: 50px;
+    }
+
+    .card div {
+
+        max-width: 175px;
+
+    }
+
+
+    .card img {
+
+
+        width: 150px;
+
+    }
+
+    .logo1 img {
+
+
+        width: 100px;
+
+    }
+
+    iframe {
+
+
+        width: 300px;
+        height: 200px;
+
+    }
+
+    .return button {
+
+        width: 100px;
+        height: 55px;
+
+    }
+
+    .buttonpage1 button {
+
+        width: 100px;
+        height: 55px;
+
+    }
+
+    .buttonentry button {
+
+        width: 100px;
+        height: 55px;
+        font-size: 20px;
+
+    }
+
+
+    .entrypage h1 {
+
+        font-size: 25px;
+
+    }
+
+    footer button {
+
+        width: 200px;
+        height: 105px;
+        font-size: 30px;
+
+    }
+
+
+
+    .wallpaper {
+
+        scroll-snap-type: unset;
+
+
+    }
+
+
+    .page1 h1,
+    .page2 h1 {
+
+        font-size: 20px;
+
+    }
+
+
+}

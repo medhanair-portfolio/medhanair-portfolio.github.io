@@ -1,0 +1,52 @@
+* {
+
+
+
+    font-family: "itc-american-typewriter", serif;
+
+}
+
+.wholesite header {
+    background-color: rgba(154, 188, 164, 255);
+    margin: 0;
+    padding: 0%;
+
+}
+
+.wholesite h1 {
+
+    text-align: center;
+
+
+}
+
+.wholesite h4 {
+    text-align: center;
+    margin: 20px;
+
+}
+
+
+.wholesite {
+
+
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    overflow-wrap: break-word;
+}
+
+.wholesite pre {
+
+    margin: 20px;
+
+
+
+
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+
+}
