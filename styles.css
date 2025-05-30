@@ -1,487 +1,262 @@
-* {
+/* Colors */
+/* Sage Green: rgb(154, 188, 164) */
+/* Charcoal: #272827 */
+/* Lavender: #a8a4b1 */
 
-    font-family: "itc-american-typewriter", serif;
-    font-weight: 500;
-    font-style: normal;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  margin: 0;
+  min-height: 100vh;
 }
 
+.homepage {
+  background-color: rgb(154, 188, 164);
+  height: 100vh;
+}
 
+* {
+  font-family: "Nunito";
+  box-sizing: border-box;
+  /* match the charcoal color of the text in logo */
+  color: #272827;
+}
 
+.sageGreen {
+  color: rgb(154, 188, 164);
+}
+
+.fancyFadeIn {
+  height: 100%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  /* delay to control when it starts */
+  animation-delay: 0.2s;
+  visibility: hidden;
+}
+
+/* called by .fancyFadeIn */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#homepageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 
 .logo {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-
-
+  display: flex;
+  justify-content: center;
+  /* negative margin accounts for whitespace at the top of the image */
+  margin-top: -100px;
 }
 
-
-
-
-header a {
-
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    margin: 20px;
-
+nav {
+  text-align: center;
+  font-size: 30px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav a,
+#resumeButton a {
+  font-family: "itc-american-typewriter";
+  font-weight: 500;
 }
 
-
-header a:hover {
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
-
+h2 {
+  font-size: 30px;
+  text-align: center;
 }
 
+nav a {
+  text-decoration-line: none;
+  margin: 10px;
+  display: inline-block;
+}
+
+nav a:hover,
+a.active {
+  text-decoration-line: underline;
+  text-decoration-thickness: 6px;
+}
+
+nav .logo {
+  margin-top: 0;
+}
+
+.innerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: rgb(154, 188, 164);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3%;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* top right bottom left */
+  padding: 20px 10px 50px 10px;
+  border-radius: 5px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery.published .content {
+  height: 500px;
+}
+
+.gallery.published .content a h3 {
+  text-decoration: none;
+  /* top right bottom left */
+  margin: 10px 10px 0 10px;
+}
+
+.content {
+  /* we are using static values for width/height to keep these uniform (if you put too much content inside, it will overflow) */
+  width: 300px;
+  height: 300px;
+  border: dashed 3px #9abca4;
+  text-align: center;
+  transition: 0.2s linear;
+  padding: 5px;
+}
+
+.content:hover {
+  border: dashed 3px #272827;
+}
+
+.content a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.content a h3 {
+  font-size: 22px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #a8a4b1;
+}
+
+.content img {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+section iframe {
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+  height: 315px;
+  border-radius: 5px;
+}
+
+p {
+  max-width: 600px;
+}
 
 .tagline {
-
-    text-align: center;
-    font-size: 20px;
-
+  text-align: center;
+  font-size: 20px;
 }
 
-
-
-
-.card div {
-
-
-    margin: 20px;
-    background: #a8a4b1;
-
-    color: black;
-
-    padding: 30px;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
+.cards div {
+  margin: 20px;
+  background: #a8a4b1;
+  padding: 30px;
+  max-width: 400px;
+  border-radius: 5px;
 }
 
-.card {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 50px;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
-.wallpaper {
-
-    background-color: rgba(154, 188, 164, 255);
-
+.cards img {
+  /* with max-width, we are saying that ideally we want 320px unless the container is less than 320px */
+  width: 320px;
+  max-width: 100%;
+  height: 320px;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
 }
 
-.wallpaper2 {
-
-    background-image: url(whitewallpaper.webp);
-    margin: 20px;
-
+.floralWallpaper {
+  background-image: url(whitewallpaper.webp);
+  padding: 3%;
 }
 
-.heading {
-    text-align: center;
-    margin: 30px;
-    padding: 30px;
+/* tone down font sizes a bit */
+@media (max-width: 750px) {
+  h2 {
+    font-size: 24px;
+  }
+  .content a h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
 
-.card div p {
-
-    margin: 20px;
-
+@media (max-width: 610px) {
+  /* get rid of the decorative diamonds */
+  .diamond {
+    display: none;
+  }
+  /* reduce padding and margins to give space for content */
+  section {
+    margin: 0;
+  }
+  .floralWallpaper {
+    padding: 0;
+  }
+  .homepage {
+    padding: 5px;
+  }
 }
 
-.blankspace {
-
-    color: #a8a4b1;
-
+/* drop the homepage links onto their own lines */
+@media (max-width: 490px) {
+  nav a {
+    display: block;
+  }
 }
 
-
-footer button a {
-
-
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    background-color: rgba(242, 238, 233, 255);
-
-
-}
-
-footer button a:hover {
-
-
-    background-color: none;
-}
-
-
-footer button:hover {
-
-    background-color: #abadbd;
-}
-
-footer button {
-
-    margin: 50px;
-    padding: 10px;
-}
-
-footer {
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-
-
-
-
-
-.wallpaper {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-}
-
-.entrypage,
-.page1,
-.page2 {
-    scroll-snap-align: start;
-    height: 100vh;
-}
-
-html,
-body {
-    height: 100%;
-    overflow: hidden;
-}
-
-.buttonentry {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.buttonentry button {
-
+/* the homepage was nasty on landscape */
+@media (orientation: landscape) {
+  #homepageContent .logo {
+    margin-top: -20px;
+  }
+  #homepageContent .logo img {
     width: 200px;
-    height: 100px;
-    font-size: 40px;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #f4dac3;
-
-}
-
-.buttonentry button:hover {
-
-    opacity: 75%;
-
-}
-
-.entrypagecolor {
-
-    margin: 20px;
-
-}
-
-
-
-.entrypage h1 {
-
-    text-align: center;
-    margin: 60px;
-
-}
-
-
-
-
-
-.youtube {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.buttonpage1 {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.page1 h1 {
-
-    text-align: center;
-    margin: 60px;
-
-}
-
-.buttonpage1 button {
-
-    width: 100px;
-    height: 75px;
-    font-size: 20px;
-    padding: 3px;
-    margin: 20px;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #f4dac3;
-
-
-}
-
-
-.buttonpage1 button:hover {
-
-    opacity: 75%;
-
-}
-
-.page2 {
-
-    gap: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-
-
-
-}
-
-.page2 div {
-    margin: 20px;
-    color: black;
-    padding: 30px;
-    max-width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.page2 div:hover {
-
-    opacity: 70%;
-}
-
-
-.page2 h1 {
-
-
-    margin: 50px;
-
-}
-
-.return {
-
-    display: flex;
-    justify-content: last baseline;
-    align-items: end;
-
-}
-
-.return button {
-
-    width: 100px;
-    height: 75px;
-    font-size: 20px;
-    padding: 3px;
-    margin: 20px;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #f4dac3;
-
-}
-
-.return button:hover {
-
-    opacity: 75%;
-
-}
-
-
-
-
-
-@media (max-width: 780px) {
-
-
-    .tagline h3 {
-
-        font-size: 20px;
-        margin: 20px;
-    }
-
-    header a {
-
-        font-size: 35px;
-
-    }
-
-    .card div {
-
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 300px;
-
-    }
-
-    iframe {
-
-
-        width: 400px;
-        height: 300px;
-
-    }
-
-    .page2 img {
-
-        width: 100px;
-        height: 100px;
-
-
-
-    }
-
-
-
-
-
-}
-
-
-@media (max-width: 465px) {
-
-
-    header a {
-
-        font-size: 20px;
-
-    }
-
-    .logo img {
-
-        width: 300px;
-        height: 350px;
-        margin: 50px;
-    }
-
-    .card div {
-
-        max-width: 175px;
-
-    }
-
-
-    .card img {
-
-
-        width: 150px;
-
-    }
-
-    .logo1 img {
-
-
-        width: 100px;
-
-    }
-
-    iframe {
-
-
-        width: 300px;
-        height: 200px;
-
-    }
-
-    .return button {
-
-        width: 100px;
-        height: 55px;
-
-    }
-
-    .buttonpage1 button {
-
-        width: 100px;
-        height: 55px;
-
-    }
-
-    .buttonentry button {
-
-        width: 100px;
-        height: 55px;
-        font-size: 20px;
-
-    }
-
-
-    .entrypage h1 {
-
-        font-size: 25px;
-
-    }
-
-    footer button {
-
-        width: 200px;
-        height: 105px;
-        font-size: 30px;
-
-    }
-
-
-
-    .wallpaper {
-
-        scroll-snap-type: unset;
-
-
-    }
-
-
-    .page1 h1,
-    .page2 h1 {
-
-        font-size: 20px;
-
-    }
-
-
+    height: 200px;
+  }
 }
